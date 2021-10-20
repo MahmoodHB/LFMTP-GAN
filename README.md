@@ -1,2 +1,2 @@
-# keras_lmfpgan-FEI-
+# keras_LMFTP-GAN
  
