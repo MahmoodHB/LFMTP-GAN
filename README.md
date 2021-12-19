@@ -1,2 +1,2 @@
-# keras_LMFTP-GAN
+# keras_LFMTP-GAN
  
