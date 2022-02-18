@@ -23,21 +23,14 @@ if __name__ == '__main__':
                   
     #print('gan.discriminator():',gan.discriminator().output)
     gan.train_gan(gen_datagen_creator=datagen.get_generator, 
-                  gen_train_batch_size=4, #原本是32
-                  gen_valid_batch_size=4,   #原本是4
+                  gen_train_batch_size=4,
+                  gen_valid_batch_size=4, 
                   disc_datagen_creator=datagen.get_discriminator_generator, 
-                  disc_batch_size=10,  #原本是100
+                  disc_batch_size=10, 
                   disc_gt_shape=gan.discriminator().output_shape[1:3],
                   optimizer=optimizer,
                   gen_steps_per_epoch=100, disc_steps_per_epoch=100,  
                   epochs=3000, out_dir='D:/keras_dltpgan(FEIresult)/', out_period=100, is_output_img=True,
                   lr=0.0001, decay=0, lambda_128=1, lambda_64=1, lambda_32=1,
                   lambda_sym=1e-1, lambda_ip=1e-3, lambda_adv=5e-3, lambda_tv=1e-5,
-    #              lambda_class=0, lambda_parts=0)
                   lambda_class=1, lambda_parts=3)
-
-'''
-lr=0.001, decay=0, lambda_128=1, lambda_64=1, lambda_32=1,
-                  lambda_sym=3e-1, lambda_ip=3e-3, lambda_adv=1e-3, lambda_tv=1e-4,
-                  lambda_class=4e-1, lambda_parts=3)
-'''
