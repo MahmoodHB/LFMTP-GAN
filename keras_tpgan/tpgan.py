@@ -1,16 +1,3 @@
-
-"""
-Keras (with Tensorflow) re-implementation of TP-GAN.
-Main part of this code is implemented reffering to author's pure Tensorflow implementation.
-https://github.com/HRLTY/TP-GAN
-
-original paper
-Huang, R., Zhang, S., Li, T., & He, R. (2017). Beyond face rotation: Global and local perception gan for photorealistic and identity preserving frontal view synthesis. arXiv preprint arXiv:1704.04086.
-https://arxiv.org/abs/1704.04086
-
-@author: yhiro
-"""
-
 from keras import backend as K
 from keras.layers import Input, Add, Maximum, Dense, Activation, BatchNormalization, Conv2D, Conv2DTranspose, Reshape, Flatten, Concatenate, Lambda, MaxPooling2D, ZeroPadding2D, Dropout, AveragePooling2D, Average
 from keras.optimizers import SGD, Adam
